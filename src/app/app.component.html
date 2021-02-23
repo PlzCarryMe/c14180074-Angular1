@@ -1,4 +1,20 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Connect 4</p>
+
+User {{a}} = <br>
+Baris<input type="text" [(ngModel)]="baris"/>
+Kolom<input type="text" [(ngModel)]="kolom"/> <br>
+
+<button (click)="GO()" >Submit</button>
+<br>
+<br>
+
+<div *ngFor="let i of items">
+	<span *ngFor="let j of i">
+        {{j}}
+    </span>
+</div>
+
+<p *ngIf="tampil">User {{a}} WINS</p>
+
+<br><br>
+<button (click)="reset()" >RESET</button>
